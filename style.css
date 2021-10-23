@@ -1,0 +1,77 @@
+.container {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+}
+
+.solid {
+	width: 20px;
+	margin-top: 141px;
+	height: 624px;
+	background: #eee;
+}
+
+.box {
+	display: flex;
+	align-items: center;
+}
+
+.box__pipe {
+	width: 80px;
+	height: 20px;
+	background: #eee;
+	position: relative;
+}
+
+.box__content {
+	width: 300px;
+	height: 300px;
+	border: 1px solid;
+	background: springgreen;
+}
+
+.box__content:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.box__water--a {
+	height: 20px;
+	background: #74ccf4;
+	width: 0;
+	position: absolute;
+	right: 0;
+	animation: increase-box__water 2s forwards linear;
+}
+
+.box__water--b {
+	height: 20px;
+	background: #74ccf4;
+	width: 0;
+	animation: increase-box__water 3s 3.5s forwards linear;
+}
+
+.box__water--c {
+	height: 20px;
+	background: #74ccf4;
+	width: 0;
+	animation: increase-box__water 1.5s 5s forwards linear;
+}
+
+@keyframes increase-box__water {
+	100% {
+		width: 100%;
+	}
+}
+
+.solid__water {
+	width: 20px;
+	background: #74ccf4;
+	height: 0;
+	animation: increase-solid__water 3s 2s forwards linear;
+}
+
+@keyframes increase-solid__water {
+	100% {
+		height: 100%;
+	}
+}
